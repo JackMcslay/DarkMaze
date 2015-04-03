@@ -1,0 +1,33 @@
+body {
+	font-family: sans-serif;
+	background: #000;
+	margin: 0;
+	color: white;
+	text-shadow: 0 0 0.2em black;
+	padding:0;
+	margin:0;
+}
+
+a {
+	color: yellow;
+}
+
+p,ul{
+	margin: 1em auto 1em auto;
+	max-width: 60em;
+	text-align: justify;
+}
+
+
+body.text div#content{
+	background: #666;
+	box-shadow: 0 0 1em #666;
+	border-radius: 2em;
+	padding: 1em;
+	margin: 2em;
+}
+
+h1,h3 {
+	text-align: center;
+}
+

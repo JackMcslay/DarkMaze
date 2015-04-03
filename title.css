@@ -1,0 +1,55 @@
+table {
+    border-spacing:0;
+    background: #aebcbf;
+    background: -ms-linear-gradient(top,  #aebcbf 0%,#6e7774 14%,#0a0e0a 93%,#0a0809 100%);
+    background: linear-gradient(to bottom,  #aebcbf 0%,#6e7774 14%,#0a0e0a 93%,#0a0809 100%);
+    margin: auto;
+}
+td{
+    width: 2em;
+    height: 2em;
+}
+.b{
+    background: black;
+}	
+body {
+    margin:2em;
+    background: black;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height: 100%;
+}
+#Options{
+    position: fixed;
+    bottom: 5em;
+    font-size: xx-large;
+    font-family: monospace;
+    width: 100%;
+    height: 1em;
+}
+#Options a{
+    display: block;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0.2em;
+    left: 0.2em;
+    color: white;
+    font-family: sans-serif;
+}
+
+
+a:hover {
+    text-shadow: 0 0 1em white;
+}
+

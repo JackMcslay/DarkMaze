@@ -1,0 +1,197 @@
+
+body  {
+background: gray;
+-background: -moz-linear-gradient(top,  #88bfe8 0%, #70b0e0 100%);
+-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#88bfe8), color-stop(100%,#70b0e0));
+-background: -webkit-linear-gradient(top,  #88bfe8 0%,#70b0e0 100%);
+-background: -o-linear-gradient(top,  #88bfe8 0%,#70b0e0 100%);
+-background: -ms-linear-gradient(top,  #88bfe8 0%,#70b0e0 100%);
+-background: linear-gradient(to bottom,  #88bfe8 0%,#70b0e0 100%);
+	border:0;
+	padding:0;
+	margin:0;
+
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	height:100%;
+	width: 100%;
+}
+
+body#about{
+	background: transparent;	
+}
+body#about p {
+	max-width: 40em;
+	text-align: justify;
+	color: white;
+	text-shadow: 0 0 0.1em black;
+	font-family: sans-serif;
+	margin: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+body#about a {
+	color: yellow;	
+}
+
+#textBack{
+	position: fixed; top: 2em; left: 2em; right: 2em; bottom: 2em; background: gray; border-radius: 2em;
+}
+
+#Console{
+	display: block;
+	position: fixed;
+	right:0px;
+	overflow-y: scroll;
+	background: rgba(120,110,90,0.7);
+	font-family: monospace;
+}
+#Console p{
+	margin:0;
+	font-family: monospace;
+}
+#Hud{	
+	position: fixed;
+	bottom:0;
+	right:0;
+	display: block;
+	padding: 1em;
+	padding-left: 0;	
+	font-family: monospace;
+	text-align: left;
+	text-shadow: 0 0 0.1em black;
+	color: white;
+}
+#Buttons,#LivesLabel,#MovesLabel{
+	display: inline;
+	white-space: nowrap;
+}
+button {
+	border: 0.2em solid black;
+	
+	background: #d8e0de;
+	background: -webkit-linear-gradient(top,  #ded 0%,#abb 22%,#9aa 33%,#8aa 50%,#899 67%,#455 82%,#111 100%);
+	background: -o-linear-gradient(top,  #d8e0de 0%,#aebfbc 22%,#99afab 33%,#8ea6a2 50%,#829d98 67%,#4e5c5a 82%,#0e0e0e 100%);
+	background: -ms-linear-gradient(top,  #d8e0de 0%,#aebfbc 22%,#99afab 33%,#8ea6a2 50%,#829d98 67%,#4e5c5a 82%,#0e0e0e 100%);
+	background: linear-gradient(to bottom, #ded 0%,#ded 21%,#abb 22%,#9aa 33%,#8aa 50%,#899 67%,#455 82%,#111 100%);
+	color: black;
+	text-shadow: 0 0 0.1em white;
+	padding:0.2em;
+	min-width: 8em;	
+	font-size: normal;
+
+}
+
+#Board,#Markers{	
+	background: black;
+	border-spacing:0;
+	-border-collapse:collapse;
+	margin: auto;
+	font-size: 100%;
+	box-shadow: 0 0 1em  black;
+	
+}
+#Board{
+	position: fixed;
+	top:0;
+	left:0;
+}
+body.UseTransitions #Board *, body.UseTransitions #Markers * {
+	transition: 0.3s ease;
+}
+
+#Markers{
+	display: inline-table;
+	float: left;
+	margin-right: 0.5em;
+}
+
+#Board td,#Markers td{
+	width: 1.2em;
+	height: 1.2em;	
+	border: 0.15em solid black;
+	background: #300;
+	text-align: center;
+	vertical-align: middle;
+	box-shadow: inset 0 0 0.3em black;
+	overflow: hidden;
+	font-family: monospace;
+}
+
+#Board td.Revealed{
+	background: #800;
+}
+#Board td.NorthPassage{
+	border-top-color: #400;
+}
+#Board td.SouthPassage{
+	border-bottom-color: #400;
+}
+#Board td.WestPassage{
+	border-left-color: #400;
+}
+#Board td.EastPassage{
+	border-right-color: #400;
+}
+#Board td.NorthWall{
+	border-top-color: gray;
+}
+#Board td.SouthWall{
+	border-bottom-color: gray;
+}
+#Board td.WestWall{
+	border-left-color: gray;
+}
+#Board td.EastWall{
+	border-right-color: gray;
+}
+#Board td.PlayerStart{
+	background: green;
+}
+
+#Treasure:before{
+	text-shadow: 0 0 0.3em white;
+	color: #fd2;
+	content: "♛";
+}
+#Treasure.Empty:before{
+	text-shadow: 0 0 0.3em black;
+	color:black;
+}
+#Player:before,#Dragon:before{
+	text-shadow: 0 0 0.3em black;
+	text-align: center;
+	color: white;
+	content: "♟";
+	display: block;
+	z-index: 10;
+	
+}
+#Dragon:before{
+	content: "☠";
+	color: black;
+	z-index: 20;
+	
+}
+#Dragon.Awake:before{
+	color: white;
+	
+}
+
+#Player.WithTreasure:before{
+	color: #fd2;
+}
+
+#Dragon,#Player,#Treasure{
+	position: fixed;
+	text-align: center;
+}
+
+a {
+	font-family: sans-serif;
+	color: white;
+	text-shadow: 0 0 0.2em black;
+}

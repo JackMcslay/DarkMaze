@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Dark Maze</title>
+		<link href="game.css" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="Defs.js"></script>		
+		<script type="text/javascript" src="Sprite.js"></script>		
+		<script type="text/javascript" src="Board.js"></script>		
+		<script type="text/javascript" src="Dragon.js"></script>		
+		<script type="text/javascript" src="Player.js"></script>		
+		<script type="text/javascript" src="Room.js"></script>		
+		<script type="text/javascript" src="Wall.js"></script>		
+		<script type="text/javascript" src="Treasure.js"></script>		
+		<script type="text/javascript" src="Main.js"></script>			
+		<script type="text/javascript" src="Console.js"></script>		
+	</head>
+	<body onload="Main();">
+	<a href="index.html">Back to the main menu</a>
+		<div id="Console"></div>
+		<div id="Hud">
+		<table id="Markers"><tr>
+		</tr></table>
+		<span id="LivesLabel">Lives: <span id="LivesCounter">-</span></span>
+		<span id="MovesLabel">Moves: <span id="MovesCounter">-/-</span></span>
+		<div id="Buttons">
+		<button id="EndTurn" onclick="board.Player.EndTurn()">End Turn</button>
+		<button id="EndGame" onclick="board.EndGame()">End Game</button>
+		</div>
+		</div>
+		<table id="Board"></table>		
+	</body>
+</html>
